@@ -1,0 +1,490 @@
+
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fffaf5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header and Flexbox */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 5%;
+    background: white;
+    box-shadow: 0 2px 8px #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #e64a19;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.navbar a {
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #e64a19;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.header-actions input {
+    width: 150px;
+    min-width: 0;
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    background: #e64a19;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #bf360c;
+}
+
+/* Banner and background properties */
+.banner {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    color: white;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.banner-content {
+    max-width: 550px;
+}
+
+.tagline {
+    color: #ffca28;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.banner h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.banner p {
+    margin-bottom: 20px;
+}
+
+/* Restaurant information: Flexbox */
+.restaurant-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px 5%;
+    background: #fff;
+}
+
+.info-box {
+    flex: 1 1 180px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #eee;
+}
+
+.info-box h3 {
+    color: #e64a19;
+}
+
+/* Common section styles */
+.section {
+    padding: 50px 6%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Food categories: Flexbox */
+.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.category {
+    flex: 1 1 130px;
+    max-width: 200px;
+    padding: 25px 10px;
+    background: white;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 3px 8px #eee;
+}
+
+.category h3 {
+    font-size: 17px;
+    margin-top: 8px;
+}
+
+.category:hover {
+    background: #fff0e8;
+    transform: translateY(-4px);
+}
+
+/* Food menu: CSS Grid */
+.menu-section {
+    background: #fff2e9;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+    gap: 25px;
+}
+
+.food-card {
+    min-width: 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #ddd;
+    transition: transform 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.food-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.08);
+}
+
+.food-details {
+    padding: 18px;
+}
+
+.food-details h3 {
+    margin-bottom: 8px;
+}
+
+.food-details p {
+    height: 55px;
+    overflow: auto;
+    color: #666;
+    font-size: 14px;
+}
+
+.food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.food-bottom strong {
+    color: #e64a19;
+    font-size: 20px;
+}
+
+.food-bottom .btn {
+    padding: 9px 12px;
+}
+
+/* Special offers: relative and absolute positioning */
+.offers {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.offer-card {
+    position: relative;
+    overflow: hidden;
+    padding: 35px 25px;
+    min-height: 180px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ffcc80, #ff7043);
+    color: #442000;
+}
+
+.offer-card:nth-child(2) {
+    background: linear-gradient(135deg, #ffe082, #ffab91);
+}
+
+.discount {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #c62828;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.offer-card h3 {
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.offer-card p {
+    margin-bottom: 15px;
+}
+
+/* Chef's special: float and clearfix */
+.chef-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+/* Clearfix contains the floated image */
+.chef-box::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.chef-image {
+    float: left;
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 25px 15px 0;
+}
+
+.chef-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Gallery: CSS Grid and image effects */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 200px);
+    gap: 15px;
+    overflow: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+/* Cart section */
+.cart-section {
+    margin: 20px 6% 50px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+    overflow-wrap: anywhere;
+}
+
+.cart-section h2 {
+    margin-bottom: 15px;
+}
+
+.cart-section h3 {
+    margin: 15px 0;
+}
+
+#cartItems {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+#cartItems p {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#cartItems button {
+    padding: 4px 8px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #dc3545;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background: #292929;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.footer h2 {
+    color: #ff7043;
+}
+
+/* Responsive design for tablets and phones */
+@media (max-width: 900px) {
+    .header {
+        justify-content: center;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(3, 180px);
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .header-actions {
+        justify-content: center;
+    }
+
+    .banner {
+        min-height: 350px;
+        padding: 35px 6%;
+    }
+
+    .section {
+        padding: 35px 5%;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+
+    .menu-grid,
+    .offers {
+        grid-template-columns: 1fr;
+    }
+
+    .food-image {
+        height: 220px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 140px);
+    }
+
+    .chef-image {
+        float: none;
+        width: 100%;
+        height: 220px;
+        margin: 0 0 15px;
+    }
+}

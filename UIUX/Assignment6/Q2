@@ -1,0 +1,14 @@
+let arr = [25, 10, 45, 5, 30];
+
+let largest = Math.max(...arr);
+let smallest = Math.min(...arr);
+
+console.log("Original Array:", arr);
+console.log("Largest Number:", largest);
+console.log("Smallest Number:", smallest);
+
+let ascending = [...arr].sort((a, b) => a - b);
+let descending = [...arr].sort((a, b) => b - a);
+
+console.log("Ascending Order:", ascending);
+console.log("Descending Order:", descending);

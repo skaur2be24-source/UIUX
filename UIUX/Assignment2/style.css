@@ -1,0 +1,192 @@
+
+/* Common styling for all pages */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f8fc;
+    color: #333;
+}
+
+header {
+    background: #176b87;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: #176b87;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e67e22;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+}
+
+section {
+    padding: 35px 0;
+}
+
+h2 {
+    color: #176b87;
+}
+
+.hero {
+    background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background: #e67e22;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c65d10;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #bbb;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #176b87;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery figure {
+    margin: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.gallery figcaption {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+footer {
+    background: #176b87;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

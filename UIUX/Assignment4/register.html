@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFest - Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>TechFest 2026</h1>
+    <p>Participant Registration</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="results.html">Results</a>
+    <a href="register.html">Register</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+</nav>
+
+<main>
+    <section>
+        <h2>Register for TechFest</h2>
+
+        <!-- HTML5 form with validation -->
+        <form action="#" method="post">
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   pattern="[0-9]{10}" placeholder="10 digit number" required>
+
+            <label for="college">College Name:</label>
+            <input type="text" id="college" name="college" required>
+
+            <label for="roll">Roll Number:</label>
+            <input type="text" id="roll" name="roll" required>
+
+            <label for="year">Year of Study:</label>
+            <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+            </select>
+
+            <label for="event">Select Event:</label>
+            <select id="event" name="event" required>
+                <option value="">Choose Event</option>
+                <option>Coding Challenge</option>
+                <option>Robo Race</option>
+                <option>Tech Quiz</option>
+            </select>
+
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="members">Number of Team Members:</label>
+            <input type="number" id="members" name="members" min="1" max="5" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label for="message">Additional Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <p>
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">I agree to the event rules.</label>
+            </p>
+
+            <button class="button" type="submit">Submit Registration</button>
+            <button class="button" type="reset">Reset Form</button>
+
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 TechFest | Designed by Sohreet Kaur</p>
+</footer>
+
+</body>
+</html>

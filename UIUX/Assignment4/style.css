@@ -1,0 +1,245 @@
+/* Basic styling for the complete website */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header and navigation */
+header {
+    background: #123b70;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav {
+    background: #0b294e;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #2c6db2;
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border: 1px solid #dce4ef;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #123b70;
+    border-bottom: 2px solid #2c6db2;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #245a92;
+}
+
+/* Homepage hero and Flexbox */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.hero img {
+    width: 45%;
+    min-width: 250px;
+    border-radius: 10px;
+}
+
+.button {
+    display: inline-block;
+    background: #1769aa;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #0d4777;
+}
+
+/* Video and audio */
+video {
+    width: 100%;
+    max-height: 350px;
+    border-radius: 8px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* CSS Grid for the gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery figure {
+    margin: 0;
+    background: #eef4fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #b9c8d8;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #dceafa;
+    color: #123b70;
+}
+
+/* Forms */
+form {
+    max-width: 700px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #aab8c8;
+    border-radius: 5px;
+    font: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #2c6db2;
+}
+
+/* Cards and lists */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+    padding: 18px;
+    border: 1px solid #cbd8e5;
+    border-radius: 8px;
+    background: #f8fbff;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #123b70;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: white;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}

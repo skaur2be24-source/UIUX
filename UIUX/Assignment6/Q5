@@ -1,0 +1,17 @@
+function processArray(arr) {
+    // Remove odd numbers
+    let evenNumbers = arr.filter(num => num % 2 === 0);
+
+    // Multiply each number by 2
+    let doubled = evenNumbers.map(num => num * 2);
+
+    // Calculate the sum
+    let sum = doubled.reduce((total, num) => total + num, 0);
+
+    console.log("Original Array:", arr);
+    console.log("Even Numbers:", evenNumbers);
+    console.log("Doubled Numbers:", doubled);
+    console.log("Sum:", sum);
+}
+
+processArray([1, 2, 3, 4, 5, 6]);

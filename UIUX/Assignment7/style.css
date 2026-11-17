@@ -1,0 +1,84 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #cccccc;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 14px;
+    margin: 5px 3px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.task {
+    background: #f9f9f9;
+    border: 1px solid #dddddd;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+}
+
+.task h3 {
+    margin-top: 0;
+}
+
+.task p {
+    white-space: pre-wrap;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.edit {
+    background-color: #e6a000;
+}
+
+.delete {
+    background-color: #dc3545;
+}
+
+.complete {
+    background-color: #28a745;
+}
